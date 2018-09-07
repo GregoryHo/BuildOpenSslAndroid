@@ -46,7 +46,7 @@ echo "Setup envrionment for ${ANDROID_ARCH}"
 echo "Compiling..."
 cd ${OPENSSL_DIR}
 perl -pi -e 's/install: all install_docs install_sw/install: install_docs install_sw/g' Makefile.org
-./config shared -no-ssl2 -no-ssl3 -no-comp -no-hw -no-engine --openssldir=/Users/$USER/GitHub/OpenSSL/lib/{$ANDROID_ARCH}/${ANDROID_API} > ../${OPENSSL_BUILD_LOG}
+./config shared -no-ssl2 -no-ssl3 -no-comp -no-hw -no-engine --openssldir=/Users/$USER/GitHub/OpenSSL/lib/${ANDROID_ARCH}/${ANDROID_API} > ../${OPENSSL_BUILD_LOG}
 make depend >> ../${OPENSSL_BUILD_LOG} 
 make all >> ../${OPENSSL_BUILD_LOG}
 
